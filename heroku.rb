@@ -8,7 +8,6 @@ class Heroku < Formula
   bottle :unneeded
 
   depends_on :arch => :x86_64
-  depends_on :ruby => "1.9"
 
   def install
     libexec.install Dir["*"]
