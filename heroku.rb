@@ -1,8 +1,8 @@
 class Heroku < Formula
   desc "CLI interface to the Heroku Platform"
   homepage "https://toolbelt.heroku.com/"
-  url "https://cli-assets.heroku.com/dev/5.0.0-aa7ee7c/heroku-v5.0.0-aa7ee7c-darwin-amd64.tar.xz"
-  sha256 "5e8c29b6cdb3f73282a6faf834f18143a7bc9f58b57095b921bb5614c79d8486"
+  url "https://cli-assets.heroku.com/branches/dev/5.0.0-7046018/heroku-v5.0.0-7046018-darwin-amd64.tar.xz"
+  sha256 "df834821f3ab2182df14a8eb4142a6002a317f9d6ec1afb252f3f657be2c3dc6"
   head "https://github.com/heroku/cli.git"
 
   bottle :unneeded
@@ -11,7 +11,7 @@ class Heroku < Formula
 
   def install
     libexec.install Dir["*"]
-    bin.write_exec_script libexec/"bin/heroku"
+    bin.install "bin/heroku"
   end
 
   test do
